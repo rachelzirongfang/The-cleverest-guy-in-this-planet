@@ -46,12 +46,13 @@ Discussion
 
 We faced a problem when choosing restaurants near the customer. Firstly, we try to calculus the distance between the customer and every restaurant then set a constraint. If the distance is smaller than the constraint, then we will select it. However, there are thousands of restaurants in New York City and our customer is not only one person. Assume there are N customers using this service and M restaurants in New York City, the Big-O of this algorithm is:
 
-$ O\left(MN\right) O ( M N ) $
+LaTeX: O\left(MN\right)
+
 
 As  and  are both quite large, this algorithm is not efficient in solving practical problems.
 
-To optimize this algorithm, we firstly use K-means clustering method to group all the restaurants in to $K\:\left(K\ll M\right) K ( K ≪ M )$  clusters. Then calculus the distance between the customer and the centroid of each cluster. Finally, we choose the restaurants in the cluster whose outcome is the smallest as the outcome. At this time, the Big-O is:
+To optimize this algorithm, we firstly use K-means clustering method to group all the restaurants in to LaTeX: K\:\left(K\ll M\right) clusters. Then calculus the distance between the customer and the centroid of each cluster. Finally, we choose the restaurants in the cluster whose outcome is the smallest as the outcome. At this time, the Big-O is:
 
-$O\left(KN\right)\:where\:K\ll M O ( K N ) w h e r e K ≪ M$
+LaTeX: O\left(KN\right)\:where\:K\ll M
 
 The efficiency of the algorithms improves a lot.
