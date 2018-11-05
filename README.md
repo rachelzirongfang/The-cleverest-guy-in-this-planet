@@ -1,6 +1,6 @@
 # The-cleverest-guy-in-this-planet
 
-Introduction
+##Introduction
 
 In this project, you will provide recommendations for our customers who want to choose a place to eat. Here, our recommendations are based on both his preferences and his location.
 
@@ -14,7 +14,7 @@ In the map above, each dot represents a restaurant. The color of the dot is dete
 
 Finally, we come to our finally recommendation based on our customers’ preference and location using the two functions above. We will provide him with a visualization of restaurants, which includes the dot of his location and the dots of locations of our final recommended restaurants.
 
-Approach
+##Approach
 
 Approach to Getting Our Dataset
 As to get data of restaurant in New York, we’ve come up with two ways.
@@ -35,7 +35,7 @@ Compared with calculating the distances between the user and every single restau
 Approach to Present Our Result
 We present our result in a visualized way. The final result that our user get will be a map marked with points which represents restaurants that is selected by the user’s preference in our pre-segmented cluster. An assistive toolbox called mapbox is used.
 
-Methodology
+##Methodology
 
 restaurants.py: Scraping Yelp website, get the dataset of locations, restaurant names and links to restaurant details of all New York City restaurants.
 search.py: Given the keyword of filtering and original restaurant dataset, output all matching restaurants.
