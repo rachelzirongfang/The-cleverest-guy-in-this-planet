@@ -38,10 +38,15 @@ We present our result in a visualized way. The final result that our user get wi
 ## 3.Methodology
 
 restaurants.py: Scraping Yelp website, get the dataset of locations, restaurant names and links to restaurant details of all New York City restaurants.
-search.py: Given the keyword of filtering and original restaurant dataset, output all matching restaurants.
-clusters.py: Given the original restaurant dataset, implement the k-means algorithm, a method for grouping data points into clusters by determining their center positions, to classify it into k clusters.
-visualization.py: Given the information of restaurants, draw a scatterplot on the map and add a tag (including restaurant name, business hour, rating and website link) to each scatter point.
-what_for_dinner.py (main function for this project): Given the location and requirements of a customer, find restaurants near him meet the requirements. Visualize the outcome on a map.
+
+(1)search.py: Given the keyword of filtering and original restaurant dataset, output all matching restaurants.
+
+(2)clusters.py: Given the original restaurant dataset, implement the k-means algorithm, a method for grouping data points into 
+clusters by determining their center positions, to classify it into k clusters.
+
+(3)visualization.py: Given the information of restaurants, draw a scatterplot on the map and add a tag (including restaurant name, business hour, rating and website link) to each scatter point.
+
+(4)what_for_dinner.py (main function for this project): Given the location and requirements of a customer, find restaurants near him meet the requirements. Visualize the outcome on a map.
 Discussion
 
 We faced a problem when choosing restaurants near the customer. Firstly, we try to calculus the distance between the customer and every restaurant then set a constraint. If the distance is smaller than the constraint, then we will select it. However, there are thousands of restaurants in New York City and our customer is not only one person. Assume there are N customers using this service and M restaurants in New York City, the Big-O of this algorithm is:
