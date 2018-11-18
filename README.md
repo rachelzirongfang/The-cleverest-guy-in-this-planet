@@ -2,23 +2,23 @@
 
 ## 1.Introduction
 
-In this project, you will provide recommendations for our customers who want to choose a place to eat. Here, our recommendations are based on both his preferences and his location.
+* In this project, you will provide recommendations for our customers who want to choose a place to eat. Here, our recommendations are based on both his preferences and his location.
 
-To come to our final result, we have overall three processes.
+* To come to our final result, we have overall three processes.
 
-* We first generate a function to screen all the restaurants in the New York City based on our customer’s preferences.
+  - We first generate a function to screen all the restaurants in the New York City based on our customer’s preferences.
 
-* Second, using the k-means method in machine learning, we will generate his classification visualization of restaurants based on his location and the Yelp academic dataset/Google map dataset. In this visualization, our customers is segmented into regions, where each region is shaded by the predicted rating of the closest restaurant (yellow is 5 stars, blue is 1 star). Specifically, the visualization you will be constructing is a scatter plot in a diagram.
+  - Second, using the k-means method in machine learning, we will generate his classification visualization of restaurants based on his location and the Yelp academic dataset/Google map dataset. In this visualization, our customers is segmented into regions, where each region is shaded by the predicted rating of the closest restaurant (yellow is 5 stars, blue is 1 star). Specifically, the visualization you will be constructing is a scatter plot in a diagram.
 
-* In the map above, each dot represents a restaurant. The color of the dot is determined by the restaurant's location. For example, downtown restaurants are colored green. The user that generated this map has a strong preference for Southside restaurants, and so the southern regions are colored yellow.
+  - In the map above, each dot represents a restaurant. The color of the dot is determined by the restaurant's location. For example, downtown restaurants are colored green. The user that generated this map has a strong preference for Southside restaurants, and so the southern regions are colored yellow.
 
-* Finally, we come to our finally recommendation based on our customers’ preference and location using the two functions above. We will provide him with a visualization of restaurants, which includes the dot of his location and the dots of locations of our final recommended restaurants.
+  - Finally, we come to our finally recommendation based on our customers’ preference and location using the two functions above. We will provide him with a visualization of restaurants, which includes the dot of his location and the dots of locations of our final recommended restaurants.
 
 
 ## 2.Approach
 
 #### （1）Approach to Getting Our Dataset
-- As to get data of restaurant in New York, we’ve come up with two ways.
+* As to get data of restaurant in New York, we’ve come up with two ways.
 
    - One is to get our dataset from Yelp. Yelp provides data in the form of json objects. Another way is to get our data from Google API. The Google API also returns data in the json object form.
 
@@ -60,4 +60,4 @@ To optimize this algorithm, we firstly use K-means clustering method to group al
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\bg_black&space;\mathbf{O\left&space;(&space;KN&space;\right&space;)&space;where&space;K\leq&space;M}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\bg_black&space;\mathbf{O\left&space;(&space;KN&space;\right&space;)&space;where&space;K\leq&space;M}" title="\mathbf{O\left ( KN \right ) where K\leq M}" /></a>
 
-* The efficiency of the algorithms improves a lot.
+The efficiency of the algorithms improves a lot.
