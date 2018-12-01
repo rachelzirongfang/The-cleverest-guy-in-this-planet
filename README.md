@@ -2,13 +2,15 @@
 
 # WhatForDinner: An intelligent restaurant recommendation based on K-means algorithem
 
-## 1.Introduction
+## 1.Description
 
-* In this project, we will provide recommendations for our customers who want to choose a place to eat. Here, our recommendations are based on both his preferences and his location.
+* Goal: In this project, we will provide recommendations for our customers who want to choose a restaurant to eat. Here, our recommendations are based on both his preferences and his location.
 
-* To come to our final result, we have overall three processes.
+* Data source: We use the open dataset from Yelp(yelp_academic_dataset_business.json). And We choose Las Vegas city to demonstrate our result.
 
-  - We first generate a function to screen all the restaurants in the Las Vegas based on our customer’s preferences.
+* Process: To come to our final result, we have overall three processes.
+
+  - We first generate a function to screen all the information in the dataset from Yelp and extract the useful information of all the restaurants in the Las Vegas.
 
   - Second, using the k-means method in machine learning, we will generate his classification visualization of restaurants based on his location and the Yelp academic dataset/Google map dataset. In this visualization, our customers is segmented into regions, where each region is shaded by the predicted rating of the closest restaurant (yellow is 5 stars, blue is 1 star). Specifically, the visualization you will be constructing is a scatter plot in a diagram.
 
@@ -20,13 +22,8 @@
 ## 2.Approach
 
 #### （1）Approach to Getting Our Dataset
-* As to get data of restaurant in New York, we’ve come up with two ways.
-
-   - One is to get our dataset from Yelp. Yelp provides data in the form of json objects. Another way is to get our data from Google API. The Google API also returns data in the json object form.
-
-   - We will use some build-in function of python’s json module to load these data and set up our restaurant dictionary based on these data. We hope to get name, location and other specific the restaurants in New York for further processing.
-
-   - If both of the two ways don’t work, web-scraping method may also be used for getting our necessary data for further processing. But compared with the web-scraping method, json object is prettified and thus easier for comprehension.
+ 
+ We get our dataset from Yelp. Yelp provides data in the form of json objects. We will use some build-in function of python’s json module to load these data and set up our restaurant dictionary based on these data. We hope to get name, location and other specific the restaurants in Las Vegas for further processing.
 
 #### （2）Approach to Processing Our Data
 The data of restaurants is clustered by k-means method. K-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. So the restaurants on map will be segmented into k clusters by k-means method.
@@ -40,7 +37,13 @@ We present our result in a visualized way. The final result that our user get wi
 
 ## 3.Methodology
 
-* restaurants.py: Scraping Yelp website, get the dataset of locations, restaurant names and links to restaurant details of all New York City restaurants.
+* 1_DataExtraction.ipynb: Using Yelp's open dataset(yelp_academic_dataset_business.json): contains business data including location data, attributes, and categories.), we extract useful information including names, cities, states, addresses, specific locations(latitudes and longitudes), stars and catogories. And we save the data as yelp.json.
+
+* 2_CityFilter.ipynb: Using the data after initial data processing(yelp.json), we extract the data of businesses in Las Vegas city. And we save the data as yelp_lv_biz.json.
+
+* 3_CategoryFilter.ipynb: Using the data after second data processing(yelp_lv_biz.json), we extraxt the data of businesses related to food. And we save the data as yelp_lv_food.json.
+
+* 4_clusters.ipynb: In this section, we apply K-Means unsupervised learning algorithm on the restaurant locations in order to classify the restaurants into clusters. First, import the restaurants location information. Then, determine how many clusters should restaurants be classified into. Thrid, classified the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers.
 
 * search.py: Given the keyword of filtering and original restaurant dataset, output all matching restaurants.
 
