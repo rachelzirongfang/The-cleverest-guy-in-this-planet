@@ -1,15 +1,14 @@
-![Image discription]
-(https://github.com/rachelzirongfang/The-cleverest-guy-in-this-planet/raw/master/img-storage/logo1.png)
+![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/logo1.png)
 
 # WhatForDinner: An intelligent restaurant recommendation based on K-means algorithem
 
 ## 1.Introduction
 
-* In this project, you will provide recommendations for our customers who want to choose a place to eat. Here, our recommendations are based on both his preferences and his location.
+* In this project, we will provide recommendations for our customers who want to choose a place to eat. Here, our recommendations are based on both his preferences and his location.
 
 * To come to our final result, we have overall three processes.
 
-  - We first generate a function to screen all the restaurants in the New York City based on our customer’s preferences.
+  - We first generate a function to screen all the restaurants in the Las Vegas based on our customer’s preferences.
 
   - Second, using the k-means method in machine learning, we will generate his classification visualization of restaurants based on his location and the Yelp academic dataset/Google map dataset. In this visualization, our customers is segmented into regions, where each region is shaded by the predicted rating of the closest restaurant (yellow is 5 stars, blue is 1 star). Specifically, the visualization you will be constructing is a scatter plot in a diagram.
 
