@@ -1,5 +1,5 @@
 ![Image discription]
-https://raw.githubusercontent.com/rachelzirongfang/The-cleverest-guy-in-this-planet/master/img-storage/logo1.png
+(https://github.com/rachelzirongfang/The-cleverest-guy-in-this-planet/raw/master/img-storage/logo1.png)
 
 # WhatForDinner: An intelligent restaurant recommendation based on K-means algorithem
 
