@@ -40,9 +40,9 @@ We present our result in a visualized way. The final result that our user get wi
 
 * 1_DataExtraction.ipynb: Using Yelp's open dataset(yelp_academic_dataset_business.json): contains business data including location data, attributes, and categories.), we extract useful information including names, cities, states, addresses, specific locations(latitudes and longitudes), stars and catogories. And we save the data as yelp.json.
 
-* 2_CityFilter.ipynb: Using the data after initial data processing(yelp.json), we extract the data of businesses in Las Vegas city. And we save the data as yelp_lv_biz.json.
+* 2_CityFilter.ipynb: Using yelp.json, we extract the data of businesses in Las Vegas city. And we save the data as yelp_lv_biz.json.
 
-* 3_CategoryFilter.ipynb: Using the data after second data processing(yelp_lv_biz.json), we extraxt the data of businesses related to food. And we save the data as yelp_lv_food.json.
+* 3_CategoryFilter.ipynb: Using yelp_lv_biz.json, we extraxt the data of businesses related to food. And we save the data as yelp_lv_food.json.
 
 * 4_clusters.ipynb: In this section, we apply K-Means unsupervised learning algorithm on the restaurant locations in order to classify the restaurants into clusters. First, import the restaurants location information. Then, determine how many clusters should restaurants be classified into. Thrid, classified the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers.
 
