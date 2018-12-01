@@ -13,7 +13,7 @@
 
 * Process: To come to our final result, we have overall three processes.
 
-  - We first generate a function to screen all the information in the dataset from Yelp and extract the useful information of all the restaurants in the Las Vegas.
+  - We first generate a function to screen all the information in the dataset from Yelp and extract the useful information of all the food-related business in Las Vegas.
 
   - Second, using the k-means method in machine learning, we will generate his classification visualization of restaurants based on his location and the Yelp academic dataset/Google map dataset. In this visualization, our customers is segmented into regions, where each region is shaded by the predicted rating of the closest restaurant (yellow is 5 stars, blue is 1 star). Specifically, the visualization you will be constructing is a scatter plot in a diagram.
 
@@ -26,7 +26,7 @@
 
 #### （1）Approach to Getting Our Dataset
  
- We get our dataset from Yelp. Yelp provides data in the form of json objects. We will use some build-in function of python’s json module to load these data and set up our restaurant dictionary based on these data. We hope to get name, location and other specific the restaurants in Las Vegas for further processing.
+ We get our dataset from Yelp. Yelp provides data in the form of json objects. We will use some build-in function of python’s json module to load these data and extract the useful information based on these data. We hope to get name, location and other specific information of the food-related business in Las Vegas for further processing.
 
 #### （2）Approach to Processing Our Data
 The data of restaurants is clustered by k-means method. K-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. So the restaurants on map will be segmented into k clusters by k-means method.
@@ -40,13 +40,9 @@ We present our result in a visualized way. The final result that our user get wi
 
 ## 3.Methodology
 
-* 1_DataExtraction.ipynb: Using Yelp's open dataset(yelp_academic_dataset_business.json): contains business data including location data, attributes, and categories.), we extract useful information including names, cities, states, addresses, specific locations(latitudes and longitudes), stars and catogories. And we save the data as yelp.json.
+* DataExtraction.ipynb: Using Yelp's open dataset(yelp_academic_dataset_business.json): contains business data including location data, attributes, and categories.), we extract useful information including names, addresses, cities, states, geoinfo(latitudes and longitudes), stars and catogories. And then, we extract the business information in Las Vegas city. And finally, we extraxt the information of all the food-related business in Las Vegas and we save the data as yelp_lv_food.json.
 
-* 2_CityFilter.ipynb: Using yelp.json, we extract the data of businesses in Las Vegas city. And we save the data as yelp_lv_biz.json.
-
-* 3_CategoryFilter.ipynb: Using yelp_lv_biz.json, we extraxt the data of businesses related to food. And we save the data as yelp_lv_food.json.
-
-* 4_clusters.ipynb: In this section, we apply K-Means unsupervised learning algorithm on the restaurant locations in order to classify the restaurants into clusters. First, import the restaurants location information. Then, determine how many clusters should restaurants be classified into. Thrid, classified the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers.
+* clusters.ipynb: In this section, we apply K-Means unsupervised learning algorithm on the restaurant locations in order to classify the restaurants into clusters. First, import the restaurants location information. Then, determine how many clusters should restaurants be classified into. Thrid, classified the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers.
 
 * search.py: Given the keyword of filtering and original restaurant dataset, output all matching restaurants.
 
