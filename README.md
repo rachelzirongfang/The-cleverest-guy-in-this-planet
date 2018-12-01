@@ -1,4 +1,7 @@
-# The-cleverest-guy-in-this-planet
+![Image discription]
+https://raw.githubusercontent.com/rachelzirongfang/The-cleverest-guy-in-this-planet/master/img-storage/logo1.png
+
+# WhatForDinner: An intelligent restaurant recommendation based on K-means algorithem
 
 ## 1.Introduction
 
@@ -58,6 +61,6 @@ As  and  are both quite large, this algorithm is not efficient in solving practi
 
 To optimize this algorithm, we firstly use K-means clustering method to group all the restaurants in to <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\mathbf{K&space;\left&space;(&space;K\leq&space;M&space;\right&space;)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\mathbf{K&space;\left&space;(&space;K\leq&space;M&space;\right&space;)}" title="\mathbf{K \left ( K\leq M \right )}" /></a> clusters. Then calculus the distance between the customer and the centroid of each cluster. Finally, we choose the restaurants in the cluster whose outcome is the smallest as the outcome. At this time, the Big-O is:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\bg_black&space;\mathbf{O\left&space;(&space;KN&space;\right&space;)&space;where&space;K\leq&space;M}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\bg_black&space;\mathbf{O\left&space;(&space;KN&space;\right&space;)&space;where&space;K\leq&space;M}" title="\mathbf{O\left ( KN \right ) where K\leq M}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\bg_white&space;\mathbf{O\left&space;(&space;KN&space;\right&space;)&space;where&space;K\leq&space;M}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\bg_white&space;\mathbf{O\left&space;(&space;KN&space;\right&space;)&space;where&space;K\leq&space;M}" title="\mathbf{O\left ( KN \right ) where K\leq M}" /></a>
 
 The efficiency of the algorithms improves a lot.
