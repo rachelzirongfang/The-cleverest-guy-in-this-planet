@@ -1,7 +1,9 @@
 ![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/logo1.png)
 
-# WhatForDinner
-## An intelligent restaurant recommendation based on K-means algorithem
+# WhatForDinner: 
+## Intelligent restaurant recommendation based on K-means algorithem
+* Group name: The cleverest guys on this planet (Section 2)
+* Members: Jing Wang(jw3690); Zeguan Wu(zw2516); Zirong Fang(zf2204); Ziwei Jiang(zj2246)
 
 ## 1.Description
 
