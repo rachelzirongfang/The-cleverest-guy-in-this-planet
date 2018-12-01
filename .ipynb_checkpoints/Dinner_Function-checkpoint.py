@@ -1,5 +1,6 @@
+
 def dinner(person_site, clusters_coordinates, clusters_data, radius=500):
-    import json
+    
     
     p_lati = person_site[0]
     p_long = person_site[1]
@@ -56,10 +57,5 @@ def dinner(person_site, clusters_coordinates, clusters_data, radius=500):
             if abs(p_lati - rstrt['latitude'])<d_lati and abs(p_long - rstrt['longitude'])<d_long:
                 rstrt_ls.append(rstrt)
     
-    if len(rstrt_ls) != 1:
-        with open('clusters_final.json', 'w') as f:
-            json.dump(rstrt_ls, f)
-    else:
-        return("Oops, there is no such restaurant near you :(")
     return rstrt_ls
 
