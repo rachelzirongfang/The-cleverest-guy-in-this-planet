@@ -1,6 +1,7 @@
 ![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/logo1.png)
 
-# WhatForDinner: An intelligent restaurant recommendation based on K-means algorithem
+# WhatForDinner
+## An intelligent restaurant recommendation based on K-means algorithem
 
 ## 1.Description
 
