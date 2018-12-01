@@ -29,7 +29,7 @@ restaurants = json.loads(data)
 # In[4]:
 
 
-#Get the location of restaurants in New York
+#Get the location of restaurants in Las Vegas
 import numpy as np
 restaurants_locations = list()
 for i in range(len(restaurants)):
