@@ -3,7 +3,7 @@
 * Group name: The cleverest guys on this planet (Section 2)
 * Members: Jing Wang(jw3690); Zeguan Wu(zw2516); Zirong Fang(zf2204); Ziwei Jiang(zj2246)
 
-## Description
+## What is it?
 
 * An Intelligent restaurant recommendation based on K-means algorithem: In this project, we will provide visualized restaurant recommendations for our customers who want to choose a restaurant to eat. Here, our recommendations are based on both his preferred distance range and his location. (And We choose Las Vegas city to demonstrate our result.)
 
@@ -23,7 +23,7 @@
 
    - what_for_dinner.ipynb (main function for this project): The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise longgitude and latitude. The main function calls Dinner_Function module, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization module to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name, address and rating star.
 
-## How to Run
+## How to Run?
 
 1. Clone this project to your computer.
 
