@@ -17,17 +17,23 @@
 
 * Functions
 
-   - __DataExtraction.ipynb__: Using Yelp's open dataset(yelp_academic_dataset_business.json): contains business data including location data, attributes, and categories.), we extract useful information including names, addresses, cities, states, geoinfo(latitudes and longitudes), stars and catogories. And then, we extract the business information in Las Vegas city. And finally, we extraxt the information of all the food-related business in Las Vegas and we save the data as yelp_lv_food.json.
+   - __DataExtraction.ipynb__: Using Yelp's open dataset(yelp_academic_dataset_business.json), we extract useful information of all the food-related business in Las Vegas and we save the data as yelp_lv_food.json.
 
-   - __clusters_code.ipynb__: In this section, we apply K-Means unsupervised learning algorithm on the restaurant locations in order to classify the restaurants into clusters. First, import the restaurants location information. Then, determine how many clusters should restaurants be classified into. Thrid, classified the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers. Finally, Visualize the clusters.
+   - __clusters_code.ipynb__: We apply K-Means unsupervised learning algorithm to classify the restaurants into k clusters and we finally choose k = 13 using elbow method. 
 
    - __what_for_dinner.ipynb (main function for this project)__: The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise longgitude and latitude. The main function calls Dinner_Function module, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization module to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name, address and rating star.
 
 ## Installation instructions
+```python
+!pip install sklearn --upgrade
+!pip install numpy --upgrade
+!pip install pandas --upgrade
+!pip install matplotlib --upgrade
 !pip install folium --upgrade
 !pip install shapely --upgrade
 !pip install geojsonio -upgrade
 !pip install branca --upgrade
+```
 
 ## How to Run?
 
@@ -74,3 +80,6 @@ To optimize this algorithm, we firstly use K-means clustering method to group al
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\bg_white&space;\mathbf{O\left&space;(&space;KN&space;\right&space;)&space;where&space;K\leq&space;M}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\bg_white&space;\mathbf{O\left&space;(&space;KN&space;\right&space;)&space;where&space;K\leq&space;M}" title="\mathbf{O\left ( KN \right ) where K\leq M}" /></a>
 
 The efficiency of the algorithms improves a lot.
+
+We used K-means algorithem to classify all the restaurants in Las Vegas into 13 clusters:
+![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/c.png)
