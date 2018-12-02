@@ -17,9 +17,9 @@
 
   - Second, using the k-means method in machine learning, we determine how many clusters should restaurants be classified into and, classify the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers and visualize the clusters.
 
-  - Third, show our results on the map, which is in html format. In the map above, the dots represents locations of our customer and nearby recommended restaurants. If you click on recommended restaurant, it will display the restaurant's name and star.
+  - Third, show our results on the map. In the map above, the dots represents locations of our customer and nearby recommended restaurants. If you click on recommended restaurant, it will display the restaurant's name and star.
 
-  - Finally, we come to our finally recommendation based on our customers’ preferred distance range and his location using the two functions above. We will provide him with a visualization of restaurants, which includes the dot of his location and the dots of locations of our final recommended restaurants. If you click on the recommended restaurant,  itwill display the restaurant's name and star.
+  - Finally, we come to our finally recommendation based on our customers’ preferred distance range and his location using the two functions above. We will provide him with a visualization of restaurants, which includes the dot of his location and the dots of locations of our final recommended restaurants. If you click on the recommended restaurant,  itwill display the restaurant's name, address and rating star.
 
 ## Methodology
 
@@ -29,30 +29,33 @@
 
 * visualization.py: Generate a html to show our results on the map, which contains locations of our customer and nearby recommended restaurants. If you click on recommended restaurant, it will display the restaurant's name and star.
 
-* what_for_dinner.py (main function for this project): The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise precision and latitude. The main function calls cluster.py, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization.py to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant,  itwill display the restaurant's name and star.
+* what_for_dinner.py (main function for this project): The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise precision and latitude. The main function calls cluster.py, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization.py to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant,  itwill display the restaurant's name, address and rating star.
 
 ## How to Run
 
-1. Clone this project to the same directory on your computer.
+1. Clone this project to your computer.
 
 2. Use Jupyter to open what_to_dinner.ipynb.
 
-3. Type in your location and preferred diatance range.(defualt: 500m)
+3. Type in your location.
+
+
+And change your preferred diatance range.(defualt: 500m)
 ```python
-what_for_dinner(person_address, clusters_coordinates, clusters_data, radius=500)
+what_for_dinner(person_site, radius=500)
 ```
 
 For exmaple:
 ```python
-what_for_dinner(person_address, clusters_coordinates, clusters_data, radius=500)
+what_for_dinner(person_address, radius=500)
 ```
 
-4. Get your visualization result in a map.(html format)
+4. Get your visualization result in a map.
 插入结果图
 
 ## Discussion
 
-We faced a problem when choosing restaurants near the customer. Firstly, we try to calculus the distance between the customer and every restaurant then set a constraint. If the distance is smaller than the constraint, then we will select it. However, there are thousands of restaurants in New York City and our customer is not only one person. Assume there are <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\mathbf{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\mathbf{N}" title="\mathbf{N}" /></a> customers using this service and <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\mathbf{M}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\mathbf{M}" title="\mathbf{M}" /></a> restaurants in New York City, the Big-O of this algorithm is:
+We faced a problem when choosing restaurants near the customer. Firstly, we try to calculus the distance between the customer and every restaurant then set a constraint. If the distance is smaller than the constraint, then we will select it. However, there are thousands of restaurants in Las Vegas and our customer is not only one person. Assume there are <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\mathbf{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\mathbf{N}" title="\mathbf{N}" /></a> customers using this service and <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\mathbf{M}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\mathbf{M}" title="\mathbf{M}" /></a> restaurants in New York City, the Big-O of this algorithm is:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\mathbf{O\left&space;(&space;MN&space;\right&space;)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\mathbf{O\left&space;(&space;MN&space;\right&space;)}" title="\mathbf{O\left ( MN \right )}" /></a>
 
