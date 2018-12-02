@@ -1,5 +1,6 @@
+import json
 def dinner(person_site, clusters_coordinates, clusters_data, radius=500):
-    import json
+    
     
     p_lati = person_site[0]
     p_long = person_site[1]
