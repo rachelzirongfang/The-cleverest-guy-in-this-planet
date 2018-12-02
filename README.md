@@ -31,7 +31,7 @@
 !pip install matplotlib --upgrade
 !pip install folium --upgrade
 !pip install shapely --upgrade
-!pip install geojsonio -upgrade
+!pip install geojsonio --upgrade
 !pip install branca --upgrade
 ```
 
