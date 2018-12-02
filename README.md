@@ -1,40 +1,28 @@
 ![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/logo1.png)
 
-# WhatForDinner: Intelligent restaurant recommendation based on K-means algorithem
-### Group name: The cleverest guys on this planet (Section 2)
-### Members: Jing Wang(jw3690); Zeguan Wu(zw2516); Zirong Fang(zf2204); Ziwei Jiang(zj2246)
+# WhatForDinner
+* Group name: The cleverest guys on this planet (Section 2)
+- Members: Jing Wang(jw3690); Zeguan Wu(zw2516); Zirong Fang(zf2204); Ziwei Jiang(zj2246)
 
 ## Description
 
-* In this project, we will provide recommendations for our customers who want to choose a restaurant to eat. Here, our recommendations are based on both his preferences and his location.
-
-* Data source: We use the open dataset from Yelp(yelp_academic_dataset_business.json). And We choose Las Vegas city to demonstrate our result.
-
-* Process: To come to our final result, we have overall three processes.
-
-  - We first generate a function to screen all the information in the dataset from Yelp and extract the useful information of all the food-related business in Las Vegas.
-
-  - Second, using the k-means method in machine learning, we determine how many clusters should restaurants be classified into and, classify the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers and visualize the clusters.
-
-  - Third, show our results on the map. In the map above, the dots represents locations of our customer and nearby recommended restaurants. If you click on recommended restaurant, it will display the restaurant's name and star.
-
-  - Finally, we come to our finally recommendation based on our customers’ preferred distance range and his location using the two functions above. We will provide him with a visualization of restaurants, which includes the dot of his location and the dots of locations of our final recommended restaurants. If you click on the recommended restaurant,  itwill display the restaurant's name, address and rating star.
+* An Intelligent restaurant recommendation based on K-means algorithem: In this project, we will provide visualized restaurant recommendations for our customers who want to choose a restaurant to eat. Here, our recommendations are based on both his preferred distance range and his location. (And We choose Las Vegas city to demonstrate our result.)
 
 ## Methodology
 
-### Modules
+* Modules
 
-* visualization.py: Generate a html to show our results on the map, which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name and star.
+   - visualization.py: Generate a html to show our results on the map, which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name and star.
 
-Dinner_Function.py: First, input customer's location and his preffered distance range radius(defualt=500). Then, assign the customer to the appropriate clusters, which is generated from K-Means method. Finally, return the information of recommended restaurants.
+   - Dinner_Function.py: First, input customer's location and his preffered distance range radius(defualt=500). Then, assign the customer to the appropriate clusters, which is generated from K-Means method. Finally, return the information of recommended restaurants.
 
-### Functions
+* Functions
 
-* DataExtraction.ipynb: Using Yelp's open dataset(yelp_academic_dataset_business.json): contains business data including location data, attributes, and categories.), we extract useful information including names, addresses, cities, states, geoinfo(latitudes and longitudes), stars and catogories. And then, we extract the business information in Las Vegas city. And finally, we extraxt the information of all the food-related business in Las Vegas and we save the data as yelp_lv_food.json.
+   - DataExtraction.ipynb: Using Yelp's open dataset(yelp_academic_dataset_business.json): contains business data including location data, attributes, and categories.), we extract useful information including names, addresses, cities, states, geoinfo(latitudes and longitudes), stars and catogories. And then, we extract the business information in Las Vegas city. And finally, we extraxt the information of all the food-related business in Las Vegas and we save the data as yelp_lv_food.json.
 
-* clusters_code.ipynb: In this section, we apply K-Means unsupervised learning algorithm on the restaurant locations in order to classify the restaurants into clusters. First, import the restaurants location information. Then, determine how many clusters should restaurants be classified into. Thrid, classified the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers. Finally, Visualize the clusters.
+   - clusters_code.ipynb: In this section, we apply K-Means unsupervised learning algorithm on the restaurant locations in order to classify the restaurants into clusters. First, import the restaurants location information. Then, determine how many clusters should restaurants be classified into. Thrid, classified the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers. Finally, Visualize the clusters.
 
-* what_for_dinner.ipynb (main function for this project): The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise longgitude and latitude. The main function calls Dinner_Function module, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization module to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name, address and rating star.
+   - what_for_dinner.ipynb (main function for this project): The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise longgitude and latitude. The main function calls Dinner_Function module, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization module to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name, address and rating star.
 
 ## How to Run
 
@@ -47,7 +35,7 @@ Dinner_Function.py: First, input customer's location and his preffered distance 
 person_address = input('Input your current address:')
 radius = input('Input your preferred distance range(defualt=500meters):')
 ```
-For example:
+  - For example:
 ![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/input.png)
 
 4. Run:
