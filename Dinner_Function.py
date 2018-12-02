@@ -61,6 +61,6 @@ def dinner(person_site, clusters_coordinates, clusters_data, radius=500):
         with open('clusters_final.json', 'w') as f:
             json.dump(rstrt_ls, f)
     else:
-        return("Oops, there is no such restaurant near you :(")
+        return("Oops, we cannot find restaurants for you :(")
     return rstrt_ls
 
