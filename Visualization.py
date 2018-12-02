@@ -19,7 +19,7 @@ get_ipython().system('pip install folium --upgrade')
 def UserCoodinates(lat,lon):
     import folium
     import branca
-    m = folium.Map(location=[lat,lon],zoom_start=18)
+    m = folium.Map(location=[lat,lon],zoom_start=16)
     html = """
     <h2 style="font-family:helvetica;font-size:16px;color:#7BA23F">You are here</h2>
     <p style="font-family:helvetica;font-size:12px;color:#4D5E39">
@@ -70,10 +70,11 @@ def ResultsVisualization(results):
 
         iframe = branca.element.IFrame(html=html, width=200, height=130)
         popup = folium.Popup(iframe, max_width=500)
+        icon=folium.Icon(color='blue')
         folium.Marker(
             location=[lat,lon], 
             popup=popup,
-            color=col).add_to(m)
+            icon=icon).add_to(m)
             
     return m
             
