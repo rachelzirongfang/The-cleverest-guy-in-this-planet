@@ -11,46 +11,55 @@
 
 * Modules
 
-   - visualization.py: Generate a html to show our results on the map, which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name and star.
+   - __visualization.py__: Generate a html to show our results on the map, which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name and star.
 
-   - Dinner_Function.py: First, input customer's location and his preffered distance range radius(defualt=500). Then, assign the customer to the appropriate clusters, which is generated from K-Means method. Finally, return the information of recommended restaurants.
+   - __Dinner_Function.py__: First, input customer's location and his preffered distance range radius(defualt=500). Then, assign the customer to the appropriate clusters, which is generated from K-Means method. Finally, return the information of recommended restaurants.
 
 * Functions
 
-   - DataExtraction.ipynb: Using Yelp's open dataset(yelp_academic_dataset_business.json): contains business data including location data, attributes, and categories.), we extract useful information including names, addresses, cities, states, geoinfo(latitudes and longitudes), stars and catogories. And then, we extract the business information in Las Vegas city. And finally, we extraxt the information of all the food-related business in Las Vegas and we save the data as yelp_lv_food.json.
+   - __DataExtraction.ipynb__: Using Yelp's open dataset(yelp_academic_dataset_business.json): contains business data including location data, attributes, and categories.), we extract useful information including names, addresses, cities, states, geoinfo(latitudes and longitudes), stars and catogories. And then, we extract the business information in Las Vegas city. And finally, we extraxt the information of all the food-related business in Las Vegas and we save the data as yelp_lv_food.json.
 
-   - clusters_code.ipynb: In this section, we apply K-Means unsupervised learning algorithm on the restaurant locations in order to classify the restaurants into clusters. First, import the restaurants location information. Then, determine how many clusters should restaurants be classified into. Thrid, classified the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers. Finally, Visualize the clusters.
+   - __clusters_code.ipynb__: In this section, we apply K-Means unsupervised learning algorithm on the restaurant locations in order to classify the restaurants into clusters. First, import the restaurants location information. Then, determine how many clusters should restaurants be classified into. Thrid, classified the restaurants into 13 clusters, output the clusters dictionary and locations of clusters centers. Finally, Visualize the clusters.
 
-   - what_for_dinner.ipynb (main function for this project): The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise longgitude and latitude. The main function calls Dinner_Function module, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization module to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name, address and rating star.
+   - __what_for_dinner.ipynb (main function for this project)__: The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise longgitude and latitude. The main function calls Dinner_Function module, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization module to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name, address and rating star.
 
 ## Installation instructions
-
+!pip install folium --upgrade
+!pip install shapely --upgrade
+!pip install geojsonio -upgrade
+!pip install branca --upgrade
 
 ## How to Run?
 
 1. Clone this project to your computer.
 
-2. Use Jupyter to open what_to_dinner.ipynb.
+2. Use Jupyter to open What_for_dinner.ipynb.
 
 3. Type in your location and preffered distance range here:
 ```python
-person_address = input('Input your current address:')
-radius = input('Input your preferred distance range(defualt=500meters):')
+person_address = input('Input your current address in Las Vegas:')
+radius = input('Input your preferred distance range(in meters):')
 ```
   - For example:
-![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/input.png)
+![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/input1.png)
 
-4. Run:
+4. Run the following code line:
 ```python
-What_for_dinner = (person_site, radius)
+what_for_dinner(person_address,radius=float(radius))
 ```
-Get your visualization result in a map.
-插入结果图
+5. Get your visualization result in a map:
+![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/r.png)
+Show your location in the map:
+![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/r1.png)
+Show the details of the recommended restaurant:
+![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/r2.png)
 
 
 ## Test
-
-
+* Open test.ipynb and run
+We use three locations to test whether this project works well. The first two locations are 'Paris Las Vegas' hotel and 'The D Las Vegas' hotel, and we successfully find restaurants around them. We then test the "Nanjing University" in China, because we cannot find restaurants in Las Vegas arond the location , it outputs 'Oops, there is no such restaurant near you :('.
+For emxample: test1('Paris Las Vegas')
+![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/t1.png)
 
 ## Discussion
 
