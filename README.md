@@ -1,13 +1,12 @@
 ![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/logo1.png)
 
-# WhatForDinner: 
-## Intelligent restaurant recommendation based on K-means algorithem
-* Group name: The cleverest guys on this planet (Section 2)
-* Members: Jing Wang(jw3690); Zeguan Wu(zw2516); Zirong Fang(zf2204); Ziwei Jiang(zj2246)
+# WhatForDinner: Intelligent restaurant recommendation based on K-means algorithem
+### Group name: The cleverest guys on this planet (Section 2)
+### Members: Jing Wang(jw3690); Zeguan Wu(zw2516); Zirong Fang(zf2204); Ziwei Jiang(zj2246)
 
 ## Description
 
-* Goal: In this project, we will provide recommendations for our customers who want to choose a restaurant to eat. Here, our recommendations are based on both his preferences and his location.
+* In this project, we will provide recommendations for our customers who want to choose a restaurant to eat. Here, our recommendations are based on both his preferences and his location.
 
 * Data source: We use the open dataset from Yelp(yelp_academic_dataset_business.json). And We choose Las Vegas city to demonstrate our result.
 
