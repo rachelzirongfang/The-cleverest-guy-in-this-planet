@@ -49,7 +49,7 @@ def ResultsVisualization(results,formatted_address):
     result = results[1:]
     for restaurant in result:
         name = restaurant['name']
-        address = restaurant['name']
+        address = restaurant['address']
         lat = restaurant['latitude']
         lon = restaurant['longitude']
         stars = restaurant['stars']
