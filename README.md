@@ -43,20 +43,19 @@ Dinner_Function.py: First, input customer's location and his preffered distance 
 
 2. Use Jupyter to open what_to_dinner.ipynb.
 
-3. Type in your location.
-
-
-And change your preferred diatance range.(defualt: 500m)
+3. Type in your location here:
 ```python
-What_for_dinner(person_site, radius=500)
+person_address = input('Input your current address:')
+radius = input('Input your preferred distance range(defualt=500meters):')
 ```
+For example:
+![logo](https://raw.githubusercontent.com/rachelzirongfang/WhatForDinner/master/img-storage/input.png)
 
-For exmaple:
+4. Run:
 ```python
-What_for_dinner(person_address, radius=500)
+What_for_dinner = (person_site, radius)
 ```
-
-4. Get your visualization result in a map.
+Get your visualization result in a map.
 插入结果图
 
 ## Discussion
