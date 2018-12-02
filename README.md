@@ -31,6 +31,25 @@
 
 * what_for_dinner.py (main function for this project): The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise precision and latitude. The main function calls cluster.py, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization.py to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant,  itwill display the restaurant's name and star.
 
+## How to Run
+
+1. Clone this project to the same directory on your computer.
+
+2. Use Jupyter to open what_to_dinner.ipynb.
+
+3. Type in your location and preferred diatance range.(defualt: 500m)
+```python
+what_for_dinner(person_address, clusters_coordinates, clusters_data, radius=500)
+```
+
+For exmaple:
+```python
+what_for_dinner(person_address, clusters_coordinates, clusters_data, radius=500)
+```
+
+4. Get your visualization result in a map.(html format)
+插入结果图
+
 ## Discussion
 
 We faced a problem when choosing restaurants near the customer. Firstly, we try to calculus the distance between the customer and every restaurant then set a constraint. If the distance is smaller than the constraint, then we will select it. However, there are thousands of restaurants in New York City and our customer is not only one person. Assume there are <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\mathbf{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\mathbf{N}" title="\mathbf{N}" /></a> customers using this service and <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\mathbf{M}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\mathbf{M}" title="\mathbf{M}" /></a> restaurants in New York City, the Big-O of this algorithm is:
