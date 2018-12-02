@@ -23,13 +23,16 @@
 
    - what_for_dinner.ipynb (main function for this project): The customer needs to enter his (or her) own location, and his (or her) preferred distance range (range radius default 500m). Then, we convert the customer's specific location into precise longgitude and latitude. The main function calls Dinner_Function module, assigns the customer to the appropriate clusters, and returns the recommended restaurants. And main fuction calls visualization module to generate the resulting image (in html format), which contains locations of our customer and nearby recommended restaurants. If you click on the recommended restaurant, it will display the restaurant's name, address and rating star.
 
+## Installation instructions
+
+
 ## How to Run?
 
 1. Clone this project to your computer.
 
 2. Use Jupyter to open what_to_dinner.ipynb.
 
-3. Type in your location here:
+3. Type in your location and preffered distance range here:
 ```python
 person_address = input('Input your current address:')
 radius = input('Input your preferred distance range(defualt=500meters):')
@@ -43,6 +46,11 @@ What_for_dinner = (person_site, radius)
 ```
 Get your visualization result in a map.
 插入结果图
+
+
+## Test
+
+
 
 ## Discussion
 
